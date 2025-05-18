@@ -13,7 +13,7 @@ Bagian about peletakan foto dan tulisan di ratakan kanan kiri
 
 3. YOURIKE:
 
-Bagian index fontnya rata kiri saja
+Bagian index tulisannya rata kiri saja
 
 4. MUH. NUR RIFKY HERMAN:
 
