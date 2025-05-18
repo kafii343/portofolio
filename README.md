@@ -1,19 +1,19 @@
 # portofolio
 FEEDBACK :
 
-Pak Hermanto:
+1. PAK HERMANTO:
 
 Gambar Youtubenya terlalu besar
 Tambahkan icon sosmed di foter
 
-REZKY ANGELINA PAILANG: 
+2. REZKY ANGELINA PAILANG: 
 
 Bagian about peletakan foto dan tulisan di ratakan kanan kiri
 
-YOURIKE:
+3. YOURIKE:
 
 Bagian index fontnya rata kiri saja
 
-MUH. NUR RIFKY HERMAN:
+4. MUH. NUR RIFKY HERMAN:
 
 Di Lavbar di berikan penanda pada judul
