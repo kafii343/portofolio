@@ -1,0 +1,956 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #dfdddb;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo h1 {
+    color: #333;
+    font-size: 1.5rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+    display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #2E7D32;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    background: #2E7D32;
+}
+.menu-toggle {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 5%;
+    background-color: #dfdddb;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+    background: linear-gradient(
+        to bottom,
+        rgba(223, 221, 219, 0) 0%,
+        rgba(223, 221, 219, 0.6) 50%,
+        rgba(223, 221, 219, 0.95) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.hero-text p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2E7D32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1B5E20;
+}
+
+/* YouTube Section */
+.youtube-section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Mengubah alignment ke tengah */
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.youtube-content {
+   flex: 1;
+    text-align: left;
+    display: flex;
+     flex-direction: column;
+    justify-content: center; /* Menambahkan vertical centering */
+}
+
+.youtube-section h2 {
+   font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.youtube-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+     margin-bottom: 0; /* Menghapus margin bottom */
+}
+
+/* ... existing code ... */
+
+.video-container {
+    flex: 1;
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 0; 
+}
+
+.video-container iframe {
+   position: absolute;
+    top: 50%; /* Mengubah posisi vertikal */
+    left: 0;
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    transform: translateY(-50%); /* Menambahkan transform untuk centering sempurna */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .youtube-section {
+         flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .youtube-content {
+        text-align: center;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* ... existing code ... */
+
+/* Section Headings */
+/* ... existing code ... */
+
+/* About Container */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #dfdddb;
+    position: relative;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.profile-card {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.about-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    opacity: 0.1;
+    border-radius: 100% 0 0 0;
+    z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 250px;
+        height: 400px;
+    }
+
+    .about-container::before,
+    .about-container::after {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Education Section */
+.education-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.education-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.education-item {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.education-item .school {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.education-item .school-name {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.education-item .year {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.current-education {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #dfdddb;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Tools Section */
+.tools-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.tools-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tool-item {
+    background: transparent; /* Mengubah background menjadi transparan */
+    padding: 0; /* Menghapus padding */
+    border-radius: 0; /* Menghapus border radius */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.tool-item img {
+    width: 80%; /* Mengurangi ukuran gambar sedikit */
+    height: 80%;
+    object-fit: contain;
+    padding: 0;
+}
+
+/* Experience Section */
+.experience-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.experience-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-card:not(:last-child) {
+    margin-bottom: 3rem; /* Cadangan jika gap tidak jalan */
+}
+.experience-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-card p {
+    padding: 1.5rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .education-list,
+    .current-education,
+    .experience-items {
+        max-width: 100%;
+    }
+}
+
+/* Project Section */
+.project-section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+    color: white;
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.project-date {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+.blog-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+.video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_square_(2017).svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+/* ... existing code ... */
+
+/* Contact Section */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.contact-form {
+    background: transparent;
+    padding: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2E7D32;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #2E7D32;
+}
+
+/* Responsive Design untuk Contact Form */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-container {
+        padding: 2rem 1rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+}
+
+/* About Container */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #dfdddb;
+    position: relative;
+    text-align: center;
+}
+
+.profile-section {
+     display: flex;
+    align-items: center; 
+    gap: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+.profile-card {
+    flex: 0 0 400px;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.profile-card img {
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+     mask-image: linear-gradient(to bottom, 
+        rgba(0,0,0,1) 80%, 
+        rgba(0,0,0,0)
+    );
+    -webkit-mask-image: linear-gradient(to bottom, 
+        rgba(0,0,0,1) 80%, 
+        rgba(0,0,0,0)
+    );
+}
+
+.profile-content {
+     flex: 1;
+    padding-top: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem; 
+    color: #333;
+    color: #333;
+    text-align: center; 
+    position: absolute; 
+    top: 4rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%;
+}
+
+.profile-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.profile-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-card {
+        width: 100%; /* Mengubah untuk responsif penuh */
+        height: 500px;
+        margin-bottom: 2rem;
+    }
+
+    .profile-content {
+        padding-top: 0;
+    }
+}
+
+
+/* Header Styles */
+.logo h1 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #2E7D32;
+}
+.typing {
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+  width: 0;
+  animation: typing 5s steps(36, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 32ch } /* jumlah karakter */
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.zoom-in {
+  transform: scale(0);
+  opacity: 0;
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+.zoom-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.judul-zoom {
+  font-size: 3.2rem; /* Ukuran besar */
+  font-weight: 600;  /* Tebal maksimal */
+  line-height: 1.2;
+  transform: scale(0);
+  opacity: 0;
+  animation: zoomInText 0.8s ease-out forwards;
+  color: #1e1e1e; /* opsional: warna gelap solid */
+}
+
+@keyframes zoomInText {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
